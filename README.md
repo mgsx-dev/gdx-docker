@@ -1,7 +1,7 @@
 
 # LibGDX image
 
-Docker image to build LibGDX Games or Extensions. See https://libgdx.badlogicgames.com.
+Docker image to build LibGDX Games or Extensions : https://hub.docker.com/r/mgsx/gdx-docker/
 
 This image provides all what you need in order to :
 * Create distribution of your game for all LibGDX supported platforms.
