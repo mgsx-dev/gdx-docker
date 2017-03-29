@@ -16,7 +16,7 @@ This image contains :
 
 To run a docker container in your current directory (eg. your LibGDX project directory), type
 
-`docker run --rm -v $(pwd) -it mgsx/libgdx bash`
+`docker run --rm -v $(pwd) -it mgsx/gdx-docker bash`
 
 This will run a new container binding current folder to container work folder.
 
