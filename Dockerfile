@@ -19,8 +19,9 @@ RUN apt-get install -y libstdc++-6-dev:i386
 RUN apt-get install -y libx11-dev libx11-dev:i386 libx11-dev:armhf libx11-dev:arm64
 
 # Install NDK
-RUN mkdir /ndk && cd /ndk && wget https://dl.google.com/android/repository/android-ndk-r13b-linux-x86_64.zip -O ndk.zip && unzip ndk.zip && rm ndk.zip
-ENV NDK_HOME /ndk/android-ndk-r13b
+RUN mkdir /ndk && cd /ndk && wget -q https://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip -O ndk.zip && unzip ndk.zip && rm ndk.zip
+ENV NDK_HOME /ndk/android-ndk-r16b
+ENV PATH="/ndk/android-ndk-r16b:${PATH}"
 
 # Install Java
 RUN apt-get install -y default-jdk-headless ant maven
