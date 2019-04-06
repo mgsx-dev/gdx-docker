@@ -1,0 +1,2 @@
+#!/bin/bash
+ccache /usr/bin/arm-linux-gnueabi-g++ "$@"

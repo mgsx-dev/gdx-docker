@@ -23,10 +23,12 @@ RUN mkdir /ndk && cd /ndk && wget -q https://dl.google.com/android/repository/an
 ENV NDK_HOME /ndk/android-ndk-r16b
 ENV PATH="/ndk/android-ndk-r16b:${PATH}"
 
+# Enable ccache for ndk
+ENV NDK_CCACHE=/usr/bin/ccache
+
 # Install Java
 RUN apt-get install -y default-jdk-headless ant maven
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
-
 
 # Install LibGDX tools
 RUN mkdir /libgdx
@@ -42,7 +44,7 @@ RUN wget http://libgdx.badlogicgames.com/packr/packr.jar
 
 
 # Install scripts
-COPY ./scripts/ /usr/bin/
+COPY ./scripts/ /usr/local/bin/
 
 # Boot in /work directory
 VOLUME /work
