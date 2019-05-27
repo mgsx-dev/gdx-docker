@@ -65,3 +65,8 @@ ENV PATH="/opt/android-sdk-linux/ndk/android-ndk-r16b:${PATH}"
 
 # Enable ccache for ndk
 ENV NDK_CCACHE=/usr/bin/ccache
+
+# Boot in /work directory
+VOLUME /work
+WORKDIR /work
+
