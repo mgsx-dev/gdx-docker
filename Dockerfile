@@ -1,5 +1,9 @@
 from ubuntu:xenial
 
+ARG ANDROID_COMPILE_SDK="28"
+ARG ANDROID_BUILD_TOOLS="28.0.2"
+ARG ANDROID_SDK_TOOLS="4333796"
+
 # Add extra architectures
 RUN dpkg --add-architecture i386 ; dpkg --add-architecture armhf ; dpkg --add-architecture arm64
 RUN sed -i 's/deb http/deb [arch=amd64,i386] http/' /etc/apt/sources.list
