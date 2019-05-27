@@ -1,11 +1,5 @@
 from ubuntu:xenial
 
-# Enable extra ubuntu repositories (Possible unnecessary)
-RUN apt-get update && apt-get install -y software-properties-common
-RUN add-apt-repository universe
-RUN add-apt-repository multiverse
-RUN add-apt-repository restricted
-
 # Add extra architectures
 RUN dpkg --add-architecture i386 ; dpkg --add-architecture armhf ; dpkg --add-architecture arm64
 RUN sed -i 's/deb http/deb [arch=amd64,i386] http/' /etc/apt/sources.list
